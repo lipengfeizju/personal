@@ -40,3 +40,16 @@
 
   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+
+
+"yang":
+  - firstname: ["Jianyi"]
+    url: https://jyang-ai.github.io/
+
+"wierman":
+  - firstname: ["Adam"]
+    url: https://adamwierman.com/
+  
+"ren":
+  - firstname: ["Shaolei"]
+    url: https://shaoleiren.github.io/
