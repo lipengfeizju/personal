@@ -34,14 +34,6 @@
     url: https://en.wikipedia.org/wiki/Max_Planck
 
 
-"bach":
-  - firstname: ["Jianyi", "Yang", "Jianyi Yang", "Yang Jianyi"]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
-
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-
-
 "yang":
   - firstname: ["Jianyi"]
     url: https://jyang-ai.github.io/
