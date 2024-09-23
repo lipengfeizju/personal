@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lipengfeizju.github.io/personal//sitemap.xml
+Sitemap: https://lipengfeizju.github.io//sitemap.xml
