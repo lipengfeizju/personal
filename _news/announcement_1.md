@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted by ACM eEnergy 2024, the paper [A dataset for research on water sustainability](https://arxiv.org/abs/2405.17469) was awarded as  ***Best Notes Paper Award*** (1 out of 40 submissions). 
+Two papers accepted by ACM eEnergy 2024, the paper [A dataset for research on water sustainability](https://arxiv.org/abs/2405.17469) was awarded as **_Best Notes Paper Award_** (1 out of 40 submissions).
