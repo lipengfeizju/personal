@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Final-year Ph.D. student, <a href='#'>University of California, Riverside</a>
 
