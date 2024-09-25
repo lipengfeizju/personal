@@ -11,12 +11,14 @@ profile:
   more_info: >
     <p>Winston Chung Hall 459</p>
     <p>Riverside, US 92507</p>
+    <p>pli081@ucr.edu, pli2@caltech.edu</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Pengfei Li, a fourth-year CS Ph.D. candidate in University of California, Riverside, under the supervision of Prof. Shaolei Ren. During the past two years, we also work closely with Adam Wierman on online optimization problems. I obtained a M.S.E degree in Laboratory for Computational Sensing and Robotics (LCSR), Johns Hopkins University, under the supervision of Prof. Alan Yuille and Prof. Gregory Hager.
+I am Pengfei Li, a <a href='#'>final-year CS Ph.D. candidate</a> in University of California, Riverside, under the supervision of Prof. [Shaolei Ren](). Starting from summer 2022,
+our group has been working closely with [Adam Wierman](https://www.cs.jhu.edu/hager/) at Caltech, focusing on trustworthy learning augmented online optimization. My overarching research goal is to develop **_trustworthy, equitable and sustainable_** machine learning systems that enhance the efficiency of real-world systems and address critical **_societal and environmental_** challenges.
 
-Prior to joining JHU, I graduated from Zhejiang University with honors, majoring in Electrical Engineering. I was also a member of Advanced Class of Engineering Education (ACEE) in Chu Kochen Honor College (CKC). In summer 2017, I took part in the International Summer Research Program in UCSD under the supervision of Prof. Atanasov.
+In the summer 2023, I am fortunate to intern at Nokia Bell Labs mentored by Dr [Matthew Andrews](https://www.bell-labs.com/about/researcher-profiles/matthewandrews/), focusing on leveraging diverse IoT sensors to aid autonomous ware-house operations with enhanced dynamic photorealistic digital twins. I obtained a M.S.E degree in Laboratory for Computational Sensing and Robotics (LCSR), Johns Hopkins University, under the supervision of Prof. [Alan Yuille](https://www.cs.jhu.edu/~ayuille/) and Prof. [Gregory Hager](https://www.cs.jhu.edu/hager/). Prior to joining JHU, I graduated from Zhejiang University with honors, majoring in Electrical Engineering. I was also a member of Advanced Class of Engineering Education (ACEE) in Chu Kochen Honor College (CKC).
