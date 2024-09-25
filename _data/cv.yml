@@ -23,7 +23,7 @@
   contents:
     - title: Visiting Ph.D. student
       institution: California Institute of Technology, Pasadena, California, US
-      year: 2024
+      year: 2024-Present
       description:
         - Mentored by Prof. Adam Wierman
 
@@ -36,21 +36,38 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - ABC
-    - year: 2029
+        - Best Notes Paper Award (1 out of 40 notes paper submissions), ACM e-Energy
+    - year: 2020
       items:
-        - EFG
+        - Dean's Distinguished Fellowship, UC Riverside
+    - year: 2018
+      items:
+        - LCSR Faculty Scholarship (1 out of 200 applicants), Johns Hopkins University
+    - year: 2018
+      items:
+        - Outstanding Graduates (top 5%), Zhejiang University
+    - year: 2016
+      items:
+        - First-class Scholarship for Outstanding Students (top 5%), Zhejiang University
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Trustworthy Online Algorithms
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Expert-calibrated End-to-end Learning to Optimize
+        - Robustness Constrained Learning for Smoothed Online Optimization
+        - Learning Augmented Decentralized Online Algorithm
+        - Robust Learning for Online Bipartite Matching
+    - title: Sustainable Artificial Intelligence
       items:
-        - Description 1.
-        - Description 2.
+        - Ecological Impact of AI, Model and Benchmark
+        - Methods Towards a More Sustainable AI Future
+    - title: Environmental and Social Fairness
+      items:
+        - Online Scheduling with Competitive Fairness Guarantees
+        - Fairness-Regularized Online Optimization
+        - Socially and Environmentally Equitable AI
+        - Socially-Equitable Public Model

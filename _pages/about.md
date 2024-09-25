@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Final-year Ph.D. student, <a href='#'>University of California, Riverside</a>
+subtitle: Final-year Ph.D. candidate, <a href='#'>University of California, Riverside</a>
 
 profile:
   align: right
@@ -17,6 +17,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Pengfei Li, a fourth-year CS Ph.D. student in University of California, Riverside, under the supervision of Prof. Shaolei Ren. During the past two years, we also work closely with Adam Wierman on online optimization problems. I obtained a M.S.E degree in Laboratory for Computational Sensing and Robotics (LCSR), Johns Hopkins University, under the supervision of Prof. Alan Yuille and Prof. Gregory Hager.
+I am Pengfei Li, a fourth-year CS Ph.D. candidate in University of California, Riverside, under the supervision of Prof. Shaolei Ren. During the past two years, we also work closely with Adam Wierman on online optimization problems. I obtained a M.S.E degree in Laboratory for Computational Sensing and Robotics (LCSR), Johns Hopkins University, under the supervision of Prof. Alan Yuille and Prof. Gregory Hager.
 
 Prior to joining JHU, I graduated from Zhejiang University with honors, majoring in Electrical Engineering. I was also a member of Advanced Class of Engineering Education (ACEE) in Chu Kochen Honor College (CKC). In summer 2017, I took part in the International Summer Research Program in UCSD under the supervision of Prof. Atanasov.
