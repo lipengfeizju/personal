@@ -6,5 +6,3 @@ related_posts: false
 ---
 
 I am honored to receive the Dissertation Completion Fellowship Award (DCFA) from the Graduate Program in Computer Science ✨✨✨ This award will support my final two quarters at UC Riverside.
-
-
