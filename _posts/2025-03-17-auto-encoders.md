@@ -17,7 +17,7 @@ This blog explores three classes of probabilistic models. We begin with the stra
 
 ## 1. Warmup: likelihood maximization with Gaussian distribution
 
-Consider a set of observations $$\mathbf{X} = \{X_i\}_{i=1}^N\\$$ sampled from Gaussian distribution \\(X_i \sim \mathcal{N}(\mu, \sigma^2)\\), the likelihood of the observation can be modeled as 
+Consider a set of observations $$\mathbf{X} = \{X_i\}_{i=1}^N$$ sampled from Gaussian distribution \\(X_i \sim \mathcal{N}(\mu, \sigma^2)\\), the likelihood of the observation can be modeled as 
 
 $$
 L(\mu, \sigma^2) = \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(X_i - \mu)^2}{2\sigma^2}\right).
@@ -54,15 +54,17 @@ where
 - \\(\pi_k\\) is the **mixture weights** (prior probabilities of each component), satisfying \\(\sum_{k=1}^{K} \pi_k = 1\\)
 - \\( \mathcal{N}(x \| \mu_k, \Sigma_k)\\) is a multivariate **Gaussian distribution** with mean \\(\mu_k\\) and covariance matrix \\(\Sigma_k\\).
 
-For this model, the goal is to estimate the parameter set $$\mathbf{\theta} = \{\pi_k, \mu_k, \sigma_k\}_{k=1}^K$$ from the data set \\(\mathbf{X}\\). In the Gaussian Mixture Model, it’s challenging to obtain a closed-form optimal estimate of the model parameters.  To make the estimation more tractable, we introduce a set latent vectors $$ \mathbf{Z} = \\{ Z_i \\}_{i=1}^N $$ for each data point, where \\(z_{ik}\\) is the binary indicator variable indicating whether  belongs to component \\(k\\). And the complete-data log-likelihood is defined as
+For this model, the goal is to estimate the parameter set $$\mathbf{\theta} = \{\pi_k, \mu_k, \sigma_k\}_{k=1}^K$$ from the data set \\(\mathbf{X}\\). In the Gaussian Mixture Model, it’s challenging to obtain a closed-form optimal estimate of the model parameters.  To make the estimation more tractable, we introduce a set latent vectors $$\mathbf{Z} = \{ Z_i \}_{i=1}^N $$ for each data point, where \\(z_{ik}\\) is the binary indicator variable indicating whether  belongs to component \\(k\\). And the complete-data log-likelihood is defined as
 
 $$
-\mathcal{L}_c(\theta) = \sum_{i=1}^N \log P(x_i, \theta) = \sum_{i=1}^N \sum_{k=1}^K z_{ik} \left[ \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right]
+\sum_{i=1}^N \log P(x_i, Z_i, \theta) = \sum_{i=1}^N \sum_{k=1}^K z_{ik} \left[ \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right]
 $$
 
-And the goal of Expectation**-**Maximization (EM) algorithm is to optimize the \\(\theta\\) and \\(\mathbf{Z}\\) iteratively. 
+However, the marginal likelihood is defined as $$\mathcal{L}_c(\theta) = \sum_{i=1}^N \log P(x_i, \theta)$$ and we need to posterior probability $$P(Z_i \vert x_i, \theta)$$ to accomplish the conversion. Without the knowledge of model parameter \\(\theta\\), it's very challenging to estimate the conditional distribution of latent variable $z$ only given a set of observations $$\mathbf{X} = \{X_i\}_{i=1}^N$$. And the model parameter \\(\theta\\) can only be optimized correctly with latent variable estimation. Then, this issue becomes a chicken-egg problem. 
 
-(* Note: during the inference stage, without the ground truth label \\(\mathbf{Z} = \\{ Z_i \\}_{i=1}^N\\), we can only get its expected value, which can be also view as the probability vector of each point belonging to a certain cluster. )
+And the goal of Expectation-Maximization (EM) algorithm is to optimize the \\(\theta\\) and \\(\mathbf{Z}\\) iteratively. 
+
+<!-- (* Note: during the inference stage, without the ground truth label \\(\mathbf{Z} = \\{ Z_i \\}_{i=1}^N\\), we can only get its expected value, which can be also view as the probability vector of each point belonging to a certain cluster. ) -->
 
 ## 3. Expectation-Maximization (EM) Algorithm
 
@@ -79,13 +81,19 @@ In this specific case, the log likelihood in the E-step is expressed as
 
 $$
 \begin{aligned}
-Q(\theta, \theta^t) & = \mathbb{E}_{Z|X, \theta^t} \left[ \sum_{i=1}^N    \log P(x_i \vert z_t, \theta) + \sum_{i=1}^N \log \frac{P(z_t, \theta)}{P( z_t \vert x_i , \theta)}   \right]\\
-& = \mathbb{E}_{Z|X, \theta^t} \left[ \sum_{i=1}^N \sum_{k=1}^K z_{ik} \left( \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right) \right]\\
-& = \sum_{i=1}^N \sum_{k=1}^K \gamma_{ik} \left( \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right),
+Q(\theta, \theta^t) & = \mathbb{E}_{Z|X, \theta^t} \left[ \sum_{i=1}^N    \log P(x_i , Z_i, \theta) -  \log P( Z_i |x_i, \theta^t) \right]\\
+& = \mathbb{E}_{Z|X, \theta^t} \left[ \sum_{i=1}^N \sum_{k=1}^K z_{ik} \left( \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right) \right] - C\\
+& = \sum_{i=1}^N \sum_{k=1}^K \gamma_{ik} \left( \log \pi_k + \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \right) - C,
 \end{aligned}
 $$
 
-where we set the distribution $$P(z_t, \theta)$$ as our posterior estimation $$P( z_t \vert x_i , \theta)$$, and $$\gamma_{i,k}$$ is the expected value of $$z_{i,k}$$, or the probability the the data sample $i$ belongs to cluster \\(k\\). Given our estimated model parameter $$\mathbf{\theta}^t = \{\pi_k, \mu_k, \sigma_k\}_{k=1}^K$$, the expected values can be estimated in the following form
+where $$C$$ is a constant value unaffected by \\(\theta\\), $$\gamma_{i,k}$$ is the expected value of $$z_{i,k}$$, or the probability the the data sample \\(i\\) belongs to cluster \\(k\\).
+
+It's impotant to note in the E-step, the conditional distribution $$P(Z_i \vert x_i, \theta^t)$$ can be easily caculated with model parameter. Then it's used to approximate the unconditional latent variable distribution $$P( Z_i \vert \theta^t)$$.
+
+
+
+Given our estimated model parameter $$\mathbf{\theta}^t = \{\pi_k, \mu_k, \sigma_k\}_{k=1}^K$$, the expected values can be estimated in the following form
 
 $$\gamma_{ik} = \frac{\pi_k \mathcal{N}(x_i|\mu_k, \Sigma_k)}{\sum_{j=1}^K \pi_j \mathcal{N}(x_i|\mu_j, \Sigma_j)}$$
 
@@ -109,8 +117,8 @@ And its closed form solution is $$\pi_k = \frac{\sum_{i=1}^N \gamma_{ik}}{N}$$. 
 
 $$
 \begin{aligned}
-\frac{\partial Q}{\partial \mu_k} &= \sum_{i=1}^N \gamma_{ik} \frac{\partial}{\partial \mu_k} \log \mathcal{N}(x_i|\mu_k, \Sigma_k) = \sum_{i=1}^N \gamma_{ik} \Sigma_k^{-1} (x_i - \mu_k) = 0\\
-\frac{\partial Q}{\partial \Sigma_k} &= \sum_{i=1}^N \gamma_{ik} \frac{\partial}{\partial \Sigma_k} \log \mathcal{N}(x_i|\mu_k, \Sigma_k) = -\frac{1}{2} \sum_{i=1}^N \gamma_{ik}\left[ \Sigma_k^{-1} - \Sigma_k^{-1} (x_i - \mu_k)(x_i - \mu_k)^T \Sigma_k^{-1} \right] = 0
+\frac{\partial Q}{\partial \mu_k} &= \sum_{i=1}^N \gamma_{ik} \frac{\partial}{\partial \mu_k} \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \Rightarrow \sum_{i=1}^N \gamma_{ik} \Sigma_k^{-1} (x_i - \mu_k) = 0\\
+\frac{\partial Q}{\partial \Sigma_k} &= \sum_{i=1}^N \gamma_{ik} \frac{\partial}{\partial \Sigma_k} \log \mathcal{N}(x_i|\mu_k, \Sigma_k) \Rightarrow  -\frac{1}{2} \sum_{i=1}^N \gamma_{ik}\left[ \Sigma_k^{-1} - \Sigma_k^{-1} (x_i - \mu_k)(x_i - \mu_k)^T \Sigma_k^{-1} \right] = 0
 \end{aligned}
 $$
 
@@ -200,3 +208,18 @@ s.t. \;\;\; z_{i,l} &= g_{\phi}(x_i, \epsilon_{i,l}) \;\;\;  \text{with} \;\;\; 
 $$
 
 where the KL-divergence can be obtained by comparing the mean and variance estimate from the encoder network \\(\phi\\) with the prior latent distribution. 
+
+
+
+
+## 5. Recap
+
+This blog explores the problem of finding a model that optimally approximates the distribution of data samples, $$\mathbf{X} = \{X_i\}_{i=1}^N$$, specifically by maximizing the marginalized log-likelihood. To achieve this, we consider latent variable models, where unobserved variables are assumed to generate the data. We then discuss how Expectation-Maximization (EM) algorithms and Variational Bayes methods estimate these latent variables and model parameters under different settins.
+
+
+![Alt text]({{ '/assets/img/blog/conditional_generation.png' | relative_url }}){:style="display:block; margin-left:auto; margin-right:auto;"}
+
+As illustrated in the figure, maximizing the marginalized probability requires statistical approximation of three key elements: 1) the model parameters, \\(\theta\\); 2) the posterior distribution, \\(P(Z \vert X, \theta\\); and 3) the distribution of the latent variable given model parameters, \\(P(Z, \theta) \\).
+
+
+In Gaussian Mixture Models (GMMs), estimating the posterior distribution (2) is relatively straightforward given the model parameters (1) and the distribution (3), enabling iterative optimization of (1) and (3). Variational Bayes methods, however, face challenges in estimating (2), necessitating an additional approximation. Stochastic Gradient Variational Bayes (SGVB) methods address this by jointly optimizing (1), (2), and (3) using Monte Carlo estimates of the Evidence Lower Bound (ELBO). Auto-encoding Variational Inference (AEVB) further reduces variance by imposing a constraint on (3), a technique widely employed in modern generative models. 
