@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Variational Auto Encoders
-date: 2015-10-20 11:12:00-0400
+date: 2025-03-17 11:12:00-0400
 description: Mathmetical comparison of EM, SGVB and beyond. 
 tags: math
 categories: 
@@ -199,4 +199,4 @@ s.t. \;\;\; z_{i,l} &= g_{\phi}(x_i, \epsilon_{i,l}) \;\;\;  \text{with} \;\;\; 
 \end{aligned}
 $$
 
-where the KL-divergence can be obtained by comparing the mean and variance estimate with the prior latent distribution. 
+where the KL-divergence can be obtained by comparing the mean and variance estimate from the encoder network \\(\phi\\) with the prior latent distribution. 
