@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Final-year Ph.D. candidate, <a href='#'>University of California, Riverside</a>
+subtitle: Final-year Ph.D. candidate, CS @ <a href='https://www1.cs.ucr.edu/'>University of California, Riverside</a> <br> Incoming Assistant Professor, iSchool @ <a href='https://www.rit.edu/computing/school-of-information'>Rochester Institute of Technology </a>
 
 profile:
   align: right
@@ -11,14 +11,14 @@ profile:
   more_info: >
     <p>Winston Chung Hall 459</p>
     <p>Riverside, US 92507</p>
-    <p>pli081@ucr.edu, pli2@caltech.edu</p>
+    <p>pli2@caltech.edu</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Pengfei Li, a <a href='#'>final-year CS Ph.D. candidate</a> in University of California, Riverside, under the supervision of Prof. [Shaolei Ren](https://shaoleiren.github.io/). Prior to that, I obtained a M.S.E degree in Robotics from Johns Hopkins University and a B.E. degree in Electrical Engineering from Zhejiang University. Since the summer of 2022, I has been working closely with [Adam Wierman](https://adamwierman.com/) at Caltech, focusing on trustworthy learning augmented online optimization. In the summer 2023, I was fortunate to intern at Nokia Bell Labs mentored by Dr [Matthew Andrews](https://www.bell-labs.com/about/researcher-profiles/matthewandrews/), focusing on autonomous ware-house operations with digital twins.
+I am Pengfei Li, a <a href='#'>final-year CS Ph.D. candidate</a> in University of California, Riverside, under the supervision of Prof. [Shaolei Ren](https://shaoleiren.github.io/). Prior to that, I obtained a M.S.E degree in Robotics from Johns Hopkins University and a B.E. degree in Electrical Engineering from Zhejiang University. Since the summer of 2022, I has been working closely with [Adam Wierman](https://adamwierman.com/) at Caltech, focusing on trustworthy learning augmented online optimization. In the summer 2023, I was fortunate to intern at Nokia Bell Labs mentored by Dr [Matthew Andrews](https://www.nokia.com/people/matthew-andrews/), focusing on autonomous ware-house operations with digital twins.
 
 #### **Research Highlights**
 

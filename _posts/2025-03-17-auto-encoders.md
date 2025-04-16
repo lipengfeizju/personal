@@ -50,7 +50,7 @@ $$
 where
 
 - \\(K\\) is the number of Gaussian components.
-- \\(\pi_k\\) is the **mixture weights** (prior probabilities of each component), satisfying \\(\sum_{k=1}^{K} \pi_k = 1\\)
+- \\(\pi*k\\) is the **mixture weights** (prior probabilities of each component), satisfying \\(\sum*{k=1}^{K} \pi_k = 1\\)
 - \\( \mathcal{N}(x \| \mu_k, \Sigma_k)\\) is a multivariate **Gaussian distribution** with mean \\(\mu_k\\) and covariance matrix \\(\Sigma_k\\).
 
 For this model, the goal is to estimate the parameter set $$\mathbf{\theta} = \{\pi_k, \mu_k, \sigma_k\}_{k=1}^K$$ from the data set \\(\mathbf{X}\\). In the Gaussian Mixture Model, it’s challenging to obtain a closed-form optimal estimate of the model parameters. To make the estimation more tractable, we introduce a set latent vectors $$\mathbf{Z} = \{ Z_i \}_{i=1}^N $$ for each data point, where \\(z\_{ik}\\) is the binary indicator variable indicating whether belongs to component \\(k\\). And the complete-data log-likelihood is defined as

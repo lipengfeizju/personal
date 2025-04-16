@@ -57,17 +57,17 @@
   contents:
     - title: Trustworthy Online Algorithms
       items:
-        - Expert-calibrated End-to-end Learning to Optimize
-        - Robustness Constrained Learning for Smoothed Online Optimization
-        - Learning Augmented Decentralized Online Algorithm
-        - Robust Learning for Online Bipartite Matching
+        - Expert-calibrated end-to-end learning to optimize (L2O)
+        - Robustness constrained learning for smoothed online optimization
+        - Learning-augmented decentralized online algorithm
+        - Robust learning for online bipartite matching
     - title: Sustainable Artificial Intelligence
       items:
-        - Ecological Impact of AI, Model and Benchmark
-        - Methods Towards a More Sustainable AI Future
+        - Ecological impact of AI, model and benchmark
+        - Methods towards a more sustainable AI future
     - title: Environmental and Social Fairness
       items:
-        - Online Scheduling with Competitive Fairness Guarantees
-        - Fairness-Regularized Online Optimization
-        - Socially and Environmentally Equitable AI
-        - Socially-Equitable Public Model
+        - Online scheduling with competitive fairness guarantees
+        - Fairness-regularized online optimization
+        - Socially and environmentally equitable AI
+        - Socially-equitable public model
