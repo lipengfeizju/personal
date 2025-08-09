@@ -25,6 +25,8 @@ docker compose -f docker-compose-slim.yml up
 
 rsync --archive --partial --progress ./\_site homepage:/home/csgrads/pli081/
 
+rsync --archive --partial --progress ./\_site/ pflics@banjo.rit.edu:/home/pflics/www
+
 ## Check the syntax
 
 npx prettier --write \*.md

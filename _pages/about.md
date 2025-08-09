@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Final-year Ph.D. candidate, CS @ <a href='https://www1.cs.ucr.edu/'>University of California, Riverside</a> <br> Incoming Assistant Professor, iSchool @ <a href='https://www.rit.edu/computing/school-of-information'>Rochester Institute of Technology </a>
+subtitle: Assistant Professor, iSchool @ <a href='https://www.rit.edu/computing/school-of-information'>Rochester Institute of Technology </a>
 
 profile:
   align: right
@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Pengfei Li, a <a href='#'>final-year CS Ph.D. candidate</a> in University of California, Riverside, under the supervision of Prof. [Shaolei Ren](https://shaoleiren.github.io/). Prior to that, I obtained a M.S.E degree in Robotics from Johns Hopkins University and a B.E. degree in Electrical Engineering from Zhejiang University. Since the summer of 2022, I has been working closely with [Adam Wierman](https://adamwierman.com/) at Caltech, focusing on trustworthy learning augmented online optimization. In the summer 2023, I was fortunate to intern at Nokia Bell Labs mentored by Dr [Matthew Andrews](https://www.nokia.com/people/matthew-andrews/), focusing on autonomous ware-house operations with digital twins.
+I am Pengfei Li, an incoming Assistant Professor in the School of Information at the Rochester Institute of Technology (RIT). I earned my Ph.D. in Computer Science from the University of California, Riverside, under the supervision of [Prof. Shaolei Ren](https://shaoleiren.github.io/). Prior to that, I received an M.S.E. in Robotics from Johns Hopkins University and a B.E. in Electrical Engineering from Zhejiang University. Since the summer of 2022, I have been working closely with [Adam Wierman](https://adamwierman.com/) at Caltech on trustworthy, learning-augmented online optimization. In the summer of 2023, I was fortunate to intern at Nokia Bell Labs, mentored by [Dr. Matthew Andrews](https://www.nokia.com/people/matthew-andrews/), where I focused on autonomous warehouse operations with digital twins.
 
 #### **Research Highlights**
 

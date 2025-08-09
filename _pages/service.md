@@ -4,12 +4,12 @@ permalink: /service/
 title: Misc
 description: During my graduate studies, I'm fortunate to have the opportunity to teach lab courses and serve as a reviewer/PC for multiple conferences and journals.
 nav: true
-nav_order: 6
+nav_order: 5
 toc:
   sidebar: left
 ---
 
-## Teaching
+## Lab Teaching
 
 <br>
 
