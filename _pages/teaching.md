@@ -14,4 +14,3 @@ toc:
 **ISTE.780.01 - Data Driven Knowledge Discovery**
 
 [\[Course Webpage\]](https://mycourses.rit.edu/d2l/home/1164343) [\[Syllabus\]](#)
-
