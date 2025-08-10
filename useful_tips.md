@@ -7,6 +7,11 @@ url: https://cs.ucr.edu/ # the base hostname & protocol for your site
 baseurl: /~pli081 # the subpath of your site, e.g. /blog/. Leave blank for root
 ```
 
+```yml
+url: https://people.rit.edu/ # the base hostname & protocol for your site
+baseurl: /pflics # the subpath of your site, e.g. /blog/. Leave blank for root
+```
+
 ## Recompile the files
 
 Launch the docker compose
